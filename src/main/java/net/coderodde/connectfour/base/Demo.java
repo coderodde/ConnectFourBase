@@ -21,7 +21,7 @@ public class Demo {
         Bot bot1 = new RandomBot(PlayerColor.WHITE_PLAYER, random);
         Bot bot2 = new RandomBot(PlayerColor.RED_PLAYER, random);
         Bot bot3 = new Human(PlayerColor.RED_PLAYER, "X >>> ", new Scanner(System.in));
-        playMatch(bot1, bot3);
+        playMatch(bot1, bot2);
     }
     
     /**

@@ -147,11 +147,11 @@ public class ConnectFourState {
                 new StringBuilder(height - 1 + (width + 1) * height);
         
         for (int y = 0; y < getHeight(); y++) {
-            stringBuilder.append('|');
+            stringBuilder.append('\u2502');
             
             for (int x = 0; x < getWidth(); x++) {
                 stringBuilder.append(playerToString(state[y][x]))
-                             .append('|');
+                             .append('\u2502');
             }
             
             stringBuilder.append('\n');
@@ -331,11 +331,13 @@ public class ConnectFourState {
     
     private String createLowerBar(int width) {
         StringBuilder stringBuilder = new StringBuilder(2 * width + 1);
-        stringBuilder.append('+');
+        stringBuilder.append('\u2558');
         
-        for (int i = 0; i < width; i++) {
-            stringBuilder.append("-+");
+        for (int i = 0; i < width - 1; i++) {
+            stringBuilder.append("\u2550\u2567");
         }
+        
+        stringBuilder.append("\u2550\u255b");
         
         return stringBuilder.toString();
     }
